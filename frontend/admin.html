@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pritam Portfolio — Admin Command Center</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #181412; color: #f5f5f4; padding: 32px; max-width: 1000px; margin: 0 auto; }
+    .card { background: #26201d; border: 1px solid #44403c; border-radius: 16px; padding: 24px; margin-bottom: 24px; }
+    input, button { padding: 10px 16px; border-radius: 8px; border: 1px solid #57534e; font-size: 0.9rem; }
+    input { background: #1c1917; color: #fff; }
+    button { background: #d97706; color: #fff; font-weight: 700; cursor: pointer; border: none; }
+    button.sec { background: #3f3a36; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.88rem; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid #3f3a36; }
+    th { color: #f59e0b; }
+  </style>
+</head>
+<body>
+  <h1>🔐 Pritam Portfolio — Owner Command Center</h1>
+  <div class="card">
+    <input type="password" id="adminKeyInput" placeholder="Enter Admin Key" value="pritam2026" />
+    <button onclick="loadDashboard()">Unlock Dashboard</button>
+    <button class="sec" onclick="refreshGitHub()">⟳ Force Sync GitHub Repos</button>
+    <button class="sec" onclick="downloadCSV()">📥 Download CSV</button>
+    <p id="statusMsg" style="margin-top:10px; color:#f59e0b;"></p>
+  </div>
+
+  <div class="card" id="statsCard" style="display:none;">
+    <h3>📊 Live Stats: <span id="viewStat">0</span> Total Views | <span id="leadStat">0</span> Inquiries</h3>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Track</th><th>Message</th><th>Date</th></tr>
+      </thead>
+      <tbody id="inqTableBody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    async function loadDashboard() {
+      const key = document.getElementById('adminKeyInput').value;
+      const res = await fetch('/api/inquiries?key=' + encodeURIComponent(key));
+      if (!res.ok) {
+        document.getElementById('statusMsg').textContent = '❌ Invalid Admin Key!';
+        return;
+      }
+      const data = await res.json();
+      document.getElementById('statusMsg').textContent = '✅ Authenticated!';
+      document.getElementById('statsCard').style.display = 'block';
+      document.getElementById('viewStat').textContent = data.views;
+      document.getElementById('leadStat').textContent = data.total;
+      document.getElementById('inqTableBody').innerHTML = data.inquiries.map(i => `
+        <tr>
+          <td>${i.id}</td>
+          <td><strong>${i.name}</strong></td>
+          <td>${i.email}</td>
+          <td>${i.scope}</td>
+          <td>${i.message}</td>
+          <td>${new Date(i.createdAt).toLocaleDateString()}</td>
+        </tr>
+      `).join('');
+    }
+    async function refreshGitHub() {
+      document.getElementById('statusMsg').textContent = '⏳ Syncing GitHub repositories...';
+      const res = await fetch('/api/github-projects?refresh=true');
+      const data = await res.json();
+      document.getElementById('statusMsg').textContent = `✅ Synced ${data.projects.length} repos (${data.source})!`;
+    }
+    function downloadCSV() {
+      const key = document.getElementById('adminKeyInput').value;
+      window.location.href = '/api/inquiries/export.csv?key=' + encodeURIComponent(key);
+    }
+  </script>
+</body>
+</html>

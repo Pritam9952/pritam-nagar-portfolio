@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sand" data-font="tech" data-layout="grid">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pritam Nagar | Data Analyst, BI Developer & Full-Stack Web Developer</title>
+  <meta name="description" content="Portfolio of Pritam Nagar — Final-year B.Tech Mechanical Engineering student at MANIT (NIT Bhopal), Data & Business Intelligence Analyst, and Web Developer based in Indore & Bhopal." />
+  <meta name="keywords" content="Pritam Nagar, Data Analyst, Business Intelligence Developer, Power BI, SQL, PostgreSQL, Python, Web Developer, NIT Bhopal, MANIT, Indore, Portfolio" />
+  <meta name="author" content="Pritam Nagar" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Pritam Nagar | Data Analyst, BI & Full-Stack Web Developer" />
+  <meta property="og:description" content="Interactive 3D Portfolio of Pritam Nagar (NIT Bhopal) — Power BI Dashboards, SQL/Python Pipelines & Web Apps." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pritam Nagar",
+    "url": "https://pritam9952.github.io/",
+    "sameAs": [
+      "https://github.com/Pritam9952",
+      "https://www.linkedin.com/in/pritam-nagar/"
+    ],
+    "jobTitle": ["Data Analyst", "Business Intelligence Developer", "Frontend Web Developer"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Maulana Azad National Institute of Technology (NIT Bhopal)"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Indore",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "IN"
+    },
+    "knowsAbout": ["Python", "SQL", "PostgreSQL", "Power BI", "Data Analytics", "HTML5", "CSS3", "JavaScript", "Frontend Development"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600;1,700&family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* 1. 5 CURATED THEMES (ACCESSIBILITY CONTRAST TUNED) */
+    :root,
+    [data-theme="sand"] {
+      --bg-primary: #e7e1d6;
+      --bg-secondary: #dcd4c6;
+      --bg-card: rgba(249, 246, 240, 0.94);
+      --bg-glass: rgba(243, 239, 231, 0.96);
+      --text-primary: #182232;
+      --text-secondary: #334155;
+      --accent: #b45309;
+      --accent-2: #0369a1;
+      --accent-glow: rgba(180, 83, 9, 0.26);
+      --border: rgba(24, 34, 50, 0.18);
+      --book-page: #fbf9f4;
+    }
+    [data-theme="rose"] {
+      --bg-primary: #1e1621;
+      --bg-secondary: #2b1f30;
+      --bg-card: rgba(43, 31, 48, 0.9);
+      --bg-glass: rgba(32, 23, 36, 0.95);
+      --text-primary: #fdf2f8;
+      --text-secondary: #e2e8f0;
+      --accent: #e11d48;
+      --accent-2: #c084fc;
+      --accent-glow: rgba(225, 29, 72, 0.35);
+      --border: rgba(225, 29, 72, 0.28);
+      --book-page: #271c2b;
+    }
+    [data-theme="sage"] {
+      --bg-primary: #dce5df;
+      --bg-secondary: #cedad2;
+      --bg-card: rgba(244, 249, 246, 0.94);
+      --bg-glass: rgba(235, 243, 238, 0.96);
+      --text-primary: #10241d;
+      --text-secondary: #2c443b;
+      --accent: #0f766e;
+      --accent-2: #c2410c;
+      --accent-glow: rgba(15, 118, 110, 0.28);
+      --border: rgba(16, 36, 29, 0.18);
+      --book-page: #f6fbf8;
+    }
+    [data-theme="mocha"] {
+      --bg-primary: #221a17;
+      --bg-secondary: #2e231f;
+      --bg-card: rgba(46, 35, 31, 0.9);
+      --bg-glass: rgba(34, 26, 23, 0.95);
+      --text-primary: #f7efe8;
+      --text-secondary: #ddd0c6;
+      --accent: #d97706;
+      --accent-2: #38bdf8;
+      --accent-glow: rgba(217, 119, 6, 0.32);
+      --border: rgba(217, 119, 6, 0.28);
+      --book-page: #2a201c;
+    }
+    [data-theme="frost"] {
+      --bg-primary: #dde3ec;
+      --bg-secondary: #cfd8e6;
+      --bg-card: rgba(246, 249, 253, 0.94);
+      --bg-glass: rgba(236, 241, 248, 0.96);
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --accent: #4338ca;
+      --accent-2: #be123c;
+      --accent-glow: rgba(67, 56, 202, 0.26);
+      --border: rgba(17, 24, 39, 0.18);
+      --book-page: #f8faff;
+    }
+
+    /* 2. 6 FONT STYLES */
+    [data-font="tech"] { --f-head: 'Space Grotesk', sans-serif; --f-body: 'Inter', sans-serif; --f-style: normal; }
+    [data-font="italic-serif"] { --f-head: 'Playfair Display', serif; --f-body: 'Playfair Display', serif; --f-style: italic; }
+    [data-font="calligraphy"] { --f-head: 'Cormorant Garamond', serif; --f-body: 'Cormorant Garamond', serif; --f-style: italic; }
+    [data-font="poppins"] { --f-head: 'Poppins', sans-serif; --f-body: 'Poppins', sans-serif; --f-style: normal; }
+    [data-font="mono"] { --f-head: 'JetBrains Mono', monospace; --f-body: 'JetBrains Mono', monospace; --f-style: normal; }
+    [data-font="syne"] { --f-head: 'Syne', sans-serif; --f-body: 'Inter', sans-serif; --f-style: normal; }
+
+    /* 3. BASE & MAGNETIC CURSOR */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--f-body) !important;
+      font-style: var(--f-style) !important;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+    h1, h2, h3, h4, .brand-logo, .hero-title {
+      font-family: var(--f-head) !important;
+      font-style: var(--f-style) !important;
+      letter-spacing: -0.01em;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, select, input, textarea { font-family: var(--f-body) !important; }
+    button { cursor: pointer; border: none; outline: none; }
+
+    #cursorRing {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 18px var(--accent-glow);
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    }
+    #cursorRing.hovered { width: 56px; height: 56px; background-color: var(--accent-glow); }
+    #cursorDot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      pointer-events: none;
+      z-index: 10001;
+      transform: translate(-50%, -50%);
+    }
+    @media (hover: none) { #cursorRing, #cursorDot { display: none; } }
+
+    /* 4. PRELOADER */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: radial-gradient(circle at center, #1c1917 0%, #090807 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-pct { font-size: 2.3rem; font-weight: 700; color: #f59e0b; text-shadow: 0 0 20px rgba(245, 158, 11, 0.5); margin-top: 8px; }
+    .loader-loc { font-size: 0.8rem; color: #d6d3d1; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; padding: 0 12px; }
+    .loader-bar-wrap { width: 230px; height: 4px; background: rgba(255,255,255,0.12); border-radius: 99px; overflow: hidden; margin: 12px auto; }
+    .loader-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #f59e0b, #f43f5e); }
+    .skip-intro-btn { margin-top: 8px; padding: 6px 16px; border-radius: 99px; background: rgba(255,255,255,0.14); color: #fafaf9; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.25); }
+    .skip-intro-btn:hover { background: #f59e0b; color: #1c1917; }
+
+    /* 5. SCROLL HUD */
+    #topScrollBar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index: 1001; }
+    #scrollHud {
+      position: fixed;
+      bottom: 22px;
+      left: 22px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 99px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      font-size: 0.78rem;
+    }
+    .scroll-ring {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: conic-gradient(var(--accent) var(--scroll-deg, 0deg), rgba(148,163,184,0.22) 0deg);
+    }
+    .scroll-ring span {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      display: grid;
+      place-items: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* 6. HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 950;
+      background: var(--bg-glass);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 13px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand-logo { font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 18px; font-size: 0.88rem; font-weight: 600; }
+    .nav-links a { color: var(--text-secondary); transition: 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .studio-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .theme-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 99px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+    }
+    .theme-btn { width: 20px; height: 20px; border-radius: 50%; border: 2px solid rgba(100,116,139,0.5); transition: transform 0.2s; }
+    .theme-btn:hover, .theme-btn.active { transform: scale(1.22); border-color: var(--accent); box-shadow: 0 0 8px var(--accent-glow); }
+    .font-select, .ats-btn {
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .ats-btn.active { background: var(--accent); color: #ffffff; }
+
+    /* 7. HERO */
+    .section { max-width: 1240px; margin: 0 auto; padding: 68px 24px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; min-height: 76vh; }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 99px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #15803d; box-shadow: 0 0 10px #15803d; animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } }
+    .role-switcher { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .role-pill { padding: 7px 14px; border-radius: 99px; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); font-size: 0.82rem; font-weight: 600; transition: 0.25s; }
+    .role-pill.active { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+    .hero-title { font-size: clamp(2.1rem, 4.3vw, 3.6rem); line-height: 1.14; margin-bottom: 16px; }
+    .hero-title span { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { color: var(--text-secondary); font-size: 1.04rem; max-width: 580px; margin-bottom: 24px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 26px; }
+    .btn-primary { padding: 12px 22px; border-radius: 10px; background: var(--accent); color: #ffffff; font-weight: 700; font-size: 0.9rem; box-shadow: 0 8px 24px var(--accent-glow); transition: transform 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-outline { padding: 12px 20px; border-radius: 10px; background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-metrics { display: flex; gap: 24px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border); }
+    .metric-item strong { display: block; font-size: 1.3rem; color: var(--accent); }
+    .metric-item span { font-size: 0.8rem; color: var(--text-secondary); }
+    .hero-3d-stage {
+      position: relative;
+      height: 430px;
+      border-radius: 24px;
+      background: radial-gradient(circle at center, var(--bg-secondary), var(--bg-primary));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+      overflow: hidden;
+    }
+    #hero3dCanvas { width: 100%; height: 100%; }
+    .float-badge {
+      position: absolute;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 700;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+      pointer-events: none;
+      transition: transform 0.12s ease-out;
+    }
+    .fb-1 { top: 20px; left: 20px; color: var(--accent); }
+    .fb-2 { bottom: 20px; right: 20px; color: var(--accent-2); }
+    .fb-3 { top: 20px; right: 20px; }
+
+    /* 8. 3D SKILLS */
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 34px; }
+    .section-head h2 { font-size: 2.1rem; }
+    .section-head p { color: var(--text-secondary); max-width: 540px; }
+    .skills-3d-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .skill-3d-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px 20px;
+      text-align: left;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out, border-color 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+    .skill-3d-card:hover, .skill-3d-card.active { border-color: var(--accent); box-shadow: 0 14px 34px var(--accent-glow); }
+    .skill-logo-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      transform: translateZ(20px);
+    }
+    .skill-logo-box img, .skill-logo-box svg { width: 32px; height: 32px; }
+    .skill-tier {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 99px;
+      background: var(--bg-secondary);
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+    .skill-3d-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+    .skill-3d-card p { font-size: 0.82rem; color: var(--text-secondary); }
+
+    /* 9. MAJOR PROJECTS + LAYOUT MODES */
+    .sync-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 8px; background: var(--bg-secondary); border: 1px solid var(--border); font-size: 0.78rem; font-weight: 700; color: var(--accent); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; }
+    [data-layout="list"] .projects-grid { grid-template-columns: 1fr; }
+    [data-layout="list"] .tilt-card { flex-direction: row; }
+    [data-layout="list"] .proj-img-wrap { width: 340px; height: auto; border-bottom: none; border-right: 1px solid var(--border); }
+    [data-layout="bento"] .projects-grid { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
+
+    .tilt-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out, border-color 0.25s;
+    }
+    .tilt-card:hover { border-color: var(--accent); }
+    .proj-img-wrap { position: relative; width: 100%; height: 205px; overflow: hidden; background: var(--bg-secondary); border-bottom: 1px solid var(--border); cursor: pointer; }
+    .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s ease; }
+    .tilt-card:hover .proj-img-wrap img { transform: scale(1.06); }
+    .proj-badge-overlay {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(6px);
+      color: #f8fafc;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+    .gallery-pill {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+    .proj-body { padding: 22px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .proj-body h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .proj-body p { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; }
+    .tech-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .tech-chip { padding: 4px 10px; border-radius: 6px; background: var(--bg-secondary); font-size: 0.74rem; color: var(--text-primary); border: 1px solid var(--border); }
+    .card-links { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.82rem; font-weight: 700; gap: 8px; }
+    .card-links a, .card-links button { color: var(--accent); background: none; font-weight: 700; font-size: 0.82rem; }
+    .card-links a:hover, .card-links button:hover { text-decoration: underline; }
+
+    /* 10. 3D READING BOOK (STRICTLY LOCKED 50/50 SPLIT) */
+    .book-wrapper { display: flex; flex-direction: column; align-items: center; margin-top: 16px; }
+    .book-stage {
+      width: 100%;
+      max-width: 960px;
+      height: 460px;
+      perspective: 2000px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      background: var(--book-page);
+      border-radius: 18px;
+      border: 2px solid var(--border);
+      box-shadow: 0 28px 65px rgba(0,0,0,0.28);
+      overflow: hidden;
+      position: relative;
+    }
+    .book-spine { position: absolute; top: 0; bottom: 0; left: 50%; width: 6px; background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(255,255,255,0.12), rgba(0,0,0,0.25)); transform: translateX(-50%); z-index: 5; }
+    .book-page {
+      min-width: 0;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+    }
+    .book-page.flipping { transform: rotateY(-16deg) scale(0.97); opacity: 0.55; }
+    .book-shot { width: 100%; height: 225px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border); margin-bottom: 10px; cursor: pointer; }
+    .thumb-strip { display: flex; gap: 6px; max-width: 100%; overflow-x: auto; padding-bottom: 6px; }
+    .thumb-strip img { width: 46px; height: 34px; flex-shrink: 0; border-radius: 6px; object-fit: cover; border: 2px solid transparent; cursor: pointer; opacity: 0.75; }
+    .thumb-strip img.active, .thumb-strip img:hover { border-color: var(--accent); opacity: 1; }
+    .page-num { font-size: 0.76rem; color: var(--accent); font-weight: 700; }
+    .book-controls { display: flex; align-items: center; gap: 16px; margin-top: 20px; }
+
+    /* 11. CASE STUDY LIGHTBOX MODAL */
+    #caseModal {
+      position: fixed;
+      inset: 0;
+      z-index: 9800;
+      background: rgba(10, 12, 18, 0.84);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #caseModal.open { display: flex; }
+    .modal-box {
+      width: 100%;
+      max-width: 840px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    }
+    .modal-hero-img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+      background: var(--bg-secondary);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      margin: 14px 0;
+    }
+
+    /* 12. TIMELINE & CONTACT */
+    .timeline { border-left: 2px solid var(--accent); padding-left: 24px; display: grid; gap: 22px; }
+    .tl-item { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; }
+    .tl-item::before { content: ''; position: absolute; left: -31px; top: 24px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    .tl-date { font-size: 0.78rem; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 32px; }
+    .scope-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+    .scope-pill { padding: 8px 14px; border-radius: 99px; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); font-size: 0.82rem; font-weight: 600; }
+    .scope-pill.active { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 6px; }
+    .form-input { width: 100%; padding: 11px 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); font-size: 0.92rem; }
+    .form-input:focus { border-color: var(--accent); outline: none; }
+    .brief-preview { background: var(--bg-secondary); border: 1px dashed var(--accent); border-radius: 16px; padding: 20px; font-size: 0.84rem; display: flex; flex-direction: column; justify-content: space-between; }
+
+    /* 13. EXTREME AI CO-PILOT & FOOTER */
+    #aiToggleBtn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 950;
+      padding: 12px 18px;
+      border-radius: 99px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 12px 30px var(--accent-glow);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #aiChatWindow {
+      position: fixed;
+      bottom: 78px;
+      right: 22px;
+      width: 370px;
+      max-width: calc(100vw - 32px);
+      background: var(--bg-glass);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.42);
+      z-index: 960;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #aiChatWindow.open { display: flex; }
+    .chat-header { padding: 12px 16px; background: var(--bg-secondary); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.9rem; }
+    .chat-body { padding: 14px; height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.84rem; }
+    .msg-bot, .msg-user { padding: 9px 12px; border-radius: 12px; max-width: 86%; line-height: 1.45; }
+    .msg-bot { background: var(--bg-secondary); align-self: flex-start; border: 1px solid var(--border); }
+    .msg-user { background: var(--accent); color: #ffffff; align-self: flex-end; font-weight: 600; }
+    .chat-quick { display: flex; gap: 6px; flex-wrap: wrap; padding: 8px 12px; border-top: 1px solid var(--border); }
+    .chat-quick button { padding: 4px 9px; border-radius: 99px; background: var(--bg-secondary); color: var(--accent); border: 1px solid var(--border); font-size: 0.72rem; font-weight: 700; }
+    .chat-input-row { display: flex; align-items: center; border-top: 1px solid var(--border); }
+    .chat-input-row input { flex: 1; padding: 11px 12px; background: transparent; border: none; color: var(--text-primary); font-size: 0.84rem; }
+    .mic-btn { padding: 0 10px; background: transparent; color: var(--accent); font-size: 1.05rem; }
+    .mic-btn.listening { color: #ef4444; animation: pulse 1s infinite; }
+    .send-btn { padding: 11px 15px; background: var(--accent); color: #ffffff; font-weight: 700; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px 86px; text-align: center; color: var(--text-secondary); font-size: 0.88rem; }
+    .visitor-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 99px; background: var(--bg-card); border: 1px solid var(--border); font-size: 0.8rem; color: var(--accent); margin-bottom: 12px; }
+
+    body.ats-mode {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-glass: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --accent: #0369a1;
+      --accent-2: #0f172a;
+      --border: #cbd5e1;
+    }
+    body.ats-mode .hero-3d-stage, body.ats-mode #scrollHud, body.ats-mode #aiToggleBtn, body.ats-mode #cursorRing, body.ats-mode #cursorDot { display: none !important; }
+    body.ats-mode .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+
+    @media (max-width: 860px) {
+      .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+      [data-layout="list"] .tilt-card { flex-direction: column; }
+      [data-layout="list"] .proj-img-wrap { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--border); }
+      .book-stage { grid-template-columns: 1fr; height: auto; }
+      .book-spine { display: none; }
+      .nav-links { display: none; }
+      #scrollHud { display: none; }
+      #aiToggleBtn { bottom: 14px; right: 14px; padding: 10px 15px; font-size: 0.82rem; }
+      #aiChatWindow { bottom: 64px; right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cursorRing"></div>
+  <div id="cursorDot"></div>
+
+  <!-- 1. PRELOADER -->
+  <div id="preloader" aria-label="Loading Portfolio">
+    <canvas id="introCanvas" width="320" height="320"></canvas>
+    <div class="loader-pct" id="loaderPct">0%</div>
+    <div class="loader-loc" id="loaderLoc">LOCKING COORDINATES: INDIA // BHOPAL & INDORE</div>
+    <div class="loader-bar-wrap"><div class="loader-bar-fill" id="loaderBar"></div></div>
+    <button class="skip-intro-btn" id="skipIntroBtn">Skip Intro →</button>
+  </div>
+
+  <!-- 2. SCROLL HUD -->
+  <div id="topScrollBar"></div>
+  <div id="scrollHud">
+    <div class="scroll-ring" id="scrollRing"><span id="scrollPctText">0%</span></div>
+    <div>
+      <div style="font-weight:700; color:var(--text-primary);" id="activeSecLabel">HERO</div>
+      <div style="font-size:0.68rem; color:var(--text-secondary);">SCROLL METER</div>
+    </div>
+  </div>
+
+  <!-- 3. HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo"><span class="brand-dot"></span> Pritam Nagar</a>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#skills">3D Skills</a>
+        <a href="#projects">Major Projects</a>
+        <a href="#book">GitHub Book</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Hire / Freelance</a>
+      </nav>
+      <div class="studio-controls">
+        <div class="theme-dots" title="Switch Color Theme">
+          <button class="theme-btn active" data-set-theme="sand" style="background:#e7e1d6;" aria-label="Warm Sand Theme" title="1. Warm Sand"></button>
+          <button class="theme-btn" data-set-theme="rose" style="background:#f43f5e;" aria-label="Crimson Velvet Theme" title="2. Crimson Velvet"></button>
+          <button class="theme-btn" data-set-theme="sage" style="background:#0f766e;" aria-label="Arctic Sage Theme" title="3. Arctic Sage"></button>
+          <button class="theme-btn" data-set-theme="mocha" style="background:#e5a95c;" aria-label="Espresso Mocha Theme" title="4. Espresso Mocha"></button>
+          <button class="theme-btn" data-set-theme="frost" style="background:#4f46e5;" aria-label="Nordic Frost Theme" title="5. Nordic Frost"></button>
+        </div>
+
+        <select class="font-select" id="fontSelector" aria-label="Font Style Switcher">
+          <option value="tech">Font: Space Tech</option>
+          <option value="italic-serif">Font: Editorial Italic</option>
+          <option value="calligraphy">Font: Script Italic</option>
+          <option value="poppins">Font: Geometric</option>
+          <option value="mono">Font: Dev Mono</option>
+          <option value="syne">Font: Bold Display</option>
+        </select>
+
+        <select class="font-select" id="layoutSelector" aria-label="Layout Switcher">
+          <option value="grid">Layout: 3D Grid</option>
+          <option value="list">Layout: Magazine</option>
+          <option value="bento">Layout: Bento</option>
+        </select>
+
+        <button class="ats-btn" id="atsToggleBtn">ATS Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 4. HERO -->
+    <section id="hero" class="section">
+      <div class="hero-grid">
+        <div>
+          <div class="status-pill"><span class="pulse-dot"></span> Open for Data Analyst, BI & Web Dev Roles</div>
+          <div class="role-switcher">
+            <button class="role-pill active" data-role="hybrid">Hybrid Profile</button>
+            <button class="role-pill" data-role="data">Data & BI Analyst</button>
+            <button class="role-pill" data-role="frontend">Full-Stack / Web Dev</button>
+          </div>
+          <h1 class="hero-title" id="heroHeading">Hi, I'm <span>Pritam Nagar</span> — Turning Data & Interfaces into Impact.</h1>
+          <p class="hero-sub" id="heroDesc">Final-year B.Tech Mechanical Engineering student at <strong>MANIT (NIT Bhopal)</strong>. I build executive Power BI dashboards, automated SQL/Python analytics pipelines, and interactive full-stack web experiences.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">Explore Featured Projects</a>
+            <a href="#book" class="btn-outline">Open GitHub Book 📖</a>
+            <a href="https://github.com/Pritam9952" target="_blank" rel="noopener" class="btn-outline">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/pritam-nagar/" target="_blank" rel="noopener" class="btn-outline">LinkedIn ↗</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item"><strong id="repoCountStat">13+</strong><span>GitHub Repositories</span></div>
+            <div class="metric-item"><strong>NIT Bhopal</strong><span>B.Tech (2022–2026)</span></div>
+            <div class="metric-item"><strong>Eicher TMTL</strong><span>QA & Data Trainee</span></div>
+          </div>
+        </div>
+        <div class="hero-3d-stage" id="heroStage">
+          <canvas id="hero3dCanvas"></canvas>
+          <div class="float-badge fb-1" id="fb1">📊 Power BI • SQL • Python</div>
+          <div class="float-badge fb-2" id="fb2">🎨 HTML5 • CSS3 • JS • Node.js</div>
+          <div class="float-badge fb-3" id="fb3">📍 Indore / Bhopal, IN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 3D SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-head">
+        <div>
+          <h2>3D Tech Stack & Core Skills</h2>
+          <p>Hover for 3D tilt depth or click any skill card to filter matching projects below.</p>
+        </div>
+        <button class="btn-outline" id="resetFilterBtn" style="padding:8px 14px; font-size:0.82rem;">Show All Projects</button>
+      </div>
+      <div class="skills-3d-grid">
+        <div class="skill-3d-card" data-skill="python">
+          <span class="skill-tier">CORE ANALYTICS</span>
+          <div class="skill-logo-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" /></div>
+          <h3>Python & Pandas</h3>
+          <p>Data cleaning, NumPy numerical pipelines, exploratory data analysis & ML vision models.</p>
+        </div>
+        <div class="skill-3d-card" data-skill="sql">
+          <span class="skill-tier">CORE DATABASE</span>
+          <div class="skill-logo-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /></div>
+          <h3>SQL & PostgreSQL</h3>
+          <p>Data Warehousing, star-schema modeling, Joins, CTEs & Window Functions.</p>
+        </div>
+        <div class="skill-3d-card" data-skill="powerbi">
+          <span class="skill-tier">CORE BI</span>
+          <div class="skill-logo-box">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="19" y="4" width="6" height="24" rx="2" fill="#F2C811"/>
+              <rect x="12" y="10" width="6" height="18" rx="2" fill="#E6AD10"/>
+              <rect x="5" y="16" width="6" height="12" rx="2" fill="#C98E0A"/>
+            </svg>
+          </div>
+          <h3>Power BI & DAX</h3>
+          <p>Executive dashboards, Power Query ETL, custom DAX measures & KPI storytelling.</p>
+        </div>
+        <div class="skill-3d-card" data-skill="frontend">
+          <span class="skill-tier">CORE FRONTEND</span>
+          <div class="skill-logo-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+          <h3>JavaScript (ES6+)</h3>
+          <p>Interactive DOM architecture, Canvas 3D animations, REST API integration & dynamic UI.</p>
+        </div>
+        <div class="skill-3d-card" data-skill="frontend">
+          <span class="skill-tier">UI ARCHITECTURE</span>
+          <div class="skill-logo-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" /></div>
+          <h3>HTML5 & Modern CSS3</h3>
+          <p>Semantic SEO structure, CSS Grid/Flexbox, 3D perspective transforms & glassmorphism.</p>
+        </div>
+        <div class="skill-3d-card" data-skill="powerbi">
+          <span class="skill-tier">REPORTING</span>
+          <div class="skill-logo-box">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="4" y="5" width="24" height="22" rx="3" fill="#107C41"/>
+              <path d="M11 11L16 16M16 16L21 21M16 16L21 11M16 16L11 21" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Advanced Excel & Power Query</h3>
+          <p>Pivot tables, root-cause defect dashboards, XLOOKUP & variance modeling.</p>
+        </div>
+        <div class="skill-3d-card" data-skill="frontend">
+          <span class="skill-tier">WORKFLOW</span>
+          <div class="skill-logo-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" /></div>
+          <h3>Git & Vercel / Render</h3>
+          <p>Version control, live repository documentation, CI deployment & full-stack hosting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MAJOR PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <div>
+          <h2>Flagship & LinkedIn Featured Projects</h2>
+          <p>Click any project card or "Case Study" to inspect exact matched GitHub dashboard screenshots.</p>
+        </div>
+        <div class="sync-badge" id="githubSyncStatus">⟳ Syncing Pritam9952 repos...</div>
+      </div>
+      <div class="projects-grid" id="majorProjectsGrid"></div>
+    </section>
+
+    <!-- 7. 3D READING BOOK WITH MULTI-SCREENSHOT GALLERY -->
+    <section id="book" class="section">
+      <div class="section-head">
+        <div>
+          <h2>Live GitHub Repositories Reading Book</h2>
+          <p>Auto-synced from github.com/Pritam9952 — switch thumbnails on the left page to inspect multiple screenshots per repo.</p>
+        </div>
+      </div>
+      <div class="book-wrapper">
+        <div class="book-stage" id="bookStage">
+          <div class="book-spine"></div>
+          <div class="book-page" id="bookLeftPage"></div>
+          <div class="book-page" id="bookRightPage"></div>
+        </div>
+        <div class="book-controls">
+          <button class="btn-outline" id="prevPageBtn">← Flip Previous</button>
+          <span class="page-num" id="bookPageIndicator">Project 1 / 6</span>
+          <button class="btn-primary" id="nextPageBtn">Flip Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <div>
+          <h2>Experience & Milestones</h2>
+          <p>Industrial analytics internship, academic foundation, and real-world freelance deliveries.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">FREELANCE & FULL-STACK // WEB & ANALYTICS</div>
+          <h3>Full-Stack Web Developer & BI Consultant</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:6px;">
+            Designed and built interactive e-commerce storefronts (Niharika Collection, Indore) and full-stack Placement Portal (deployed on Vercel) with multi-theme customization and automated CSV reporting.
+          </p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">MAY 2024 – JUNE 2024 // INDUSTRIAL INTERNSHIP</div>
+          <h3>Quality Assurance & Data Analytics Trainee — Eicher TMTL</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:6px;">
+            Built the Eicher TMTL Defect Analysis Dashboard using Excel & Power Query for tractor component defect tracking, Pareto root-cause analysis, and preventive quality recommendations.
+          </p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2022 – 2026 // EDUCATION</div>
+          <h3>B.Tech in Mechanical Engineering — MANIT (NIT Bhopal)</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:6px;">
+            Combining quantitative engineering problem-solving with Business Intelligence, PostgreSQL/SQL, Python analytics, and modern web development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-head">
+        <div>
+          <h2>Start a Project or Hiring Conversation</h2>
+          <p>Submit directly to Pritam's backend database or dispatch via instant email.</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <label style="font-size:0.82rem; color:var(--text-secondary);">1. Select Engagement Track</label>
+          <div class="scope-pills">
+            <button type="button" class="scope-pill active" data-scope="Full-Time Data / BI Role">Full-Time Job</button>
+            <button type="button" class="scope-pill" data-scope="Full-Stack / Frontend Web">Web Dev</button>
+            <button type="button" class="scope-pill" data-scope="Power BI / SQL Dashboard">BI Dashboard</button>
+            <button type="button" class="scope-pill" data-scope="E-Commerce Storefront">E-Commerce Site</button>
+          </div>
+          <div class="form-group">
+            <label for="senderName">Your Name / Company</label>
+            <input type="text" id="senderName" class="form-input" placeholder="e.g., Rahul Sharma / TechCorp" />
+          </div>
+          <div class="form-group">
+            <label for="senderEmail">Work Email</label>
+            <input type="email" id="senderEmail" class="form-input" placeholder="you@company.com" />
+          </div>
+          <div class="form-group">
+            <label for="senderMsg">Project Scope or Role Details</label>
+            <textarea id="senderMsg" rows="3" class="form-input" placeholder="Tell me about the role, dataset, or website you want to build..."></textarea>
+          </div>
+        </div>
+        <div class="brief-preview">
+          <div>
+            <div style="color:var(--accent); font-weight:700; margin-bottom:10px;">// LIVE DISPATCH BRIEF</div>
+            <pre id="liveBriefText" style="white-space:pre-wrap; line-height:1.6; color:var(--text-primary);"></pre>
+            <div id="apiSubmitStatus" style="margin-top:10px; font-size:0.8rem; font-weight:700; color:var(--accent);"></div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+            <button type="button" class="btn-primary" id="submitBackendBtn">Send Direct Inquiry ✓</button>
+            <button type="button" class="btn-outline" id="copyBriefBtn">Copy Brief</button>
+            <a id="mailtoDispatchBtn" href="mailto:pritamnagar@example.com" class="btn-outline">Email ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CASE STUDY & MULTI-SCREENSHOT LIGHTBOX MODAL -->
+  <div id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px;">
+        <span class="page-num" id="modalTag">CASE STUDY</span>
+        <button id="closeModalBtn" class="btn-outline" style="padding:6px 14px;">✕ Close</button>
+      </div>
+      <h2 id="modalTitle" style="margin-top:8px; font-size:1.65rem;"></h2>
+      <img id="modalMainImg" class="modal-hero-img" src="" alt="Project Screenshot" />
+      <div class="thumb-strip" id="modalThumbStrip" style="margin-bottom:14px;"></div>
+      <p id="modalDesc" style="color:var(--text-secondary); margin-bottom:16px;"></p>
+      <div class="tech-row" id="modalTechRow"></div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+        <a id="modalGithubLink" href="#" target="_blank" rel="noopener" class="btn-primary">Open GitHub Repository ↗</a>
+        <a id="modalLiveLink" href="#" target="_blank" rel="noopener" class="btn-outline">View Live / LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. FOOTER -->
+  <footer>
+    <div class="visitor-pill"><span>👁️ Portfolio Views:</span> <strong id="visitorCount">1,250</strong></div>
+    <p>© 2026 Pritam Nagar • MANIT (NIT Bhopal) • <a href="/admin.html" style="text-decoration:underline; opacity:0.85;">Owner Admin</a></p>
+  </footer>
+
+  <!-- 11. EXTREME AI CO-PILOT -->
+  <button id="aiToggleBtn" aria-label="Open Pritam AI Co-Pilot">🤖 Pritam AI Co-Pilot</button>
+  <div id="aiChatWindow" role="region" aria-label="AI Co-Pilot Chat">
+    <div class="chat-header">
+      <span>⚡ Pritam AI Co-Pilot (Site Control + JD Fit)</span>
+      <button id="closeChatBtn" aria-label="Close Chat" style="background:none; color:var(--text-secondary); font-size:1.1rem;">✕</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg-bot">Namaste! Main Pritam ka AI Co-Pilot hoon. Aap mujhse projects puch sakte hain, JD paste karke Fit Score check kar sakte hain, ya bol sakte hain: <em>"Crimson theme lagao"</em> ya <em>"Open Amazon"</em>!</div>
+    </div>
+    <div class="chat-quick">
+      <button type="button" data-q="Check JD match for SQL Python Power BI Analyst">JD Fit Score</button>
+      <button type="button" data-q="Open Amazon project gallery">Open Amazon</button>
+      <button type="button" data-q="Switch to Crimson theme">Crimson Theme</button>
+      <button type="button" data-q="Eicher TMTL internship">Eicher Exp</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" aria-label="Ask AI Co-Pilot" placeholder="Ask AI, paste JD, or give command..." />
+      <button type="button" class="mic-btn" id="micBtn" aria-label="Voice Command" title="Speak Command">🎤</button>
+      <button type="button" class="send-btn" id="sendChatBtn">Send</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const API_BASE = window.location.origin.startsWith('http') && window.location.port === '5000'
+        ? ''
+        : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:5000' : '');
+
+      /* 1. MAGNETIC CURSOR */
+      const cursorRing = document.getElementById('cursorRing');
+      const cursorDot = document.getElementById('cursorDot');
+      let ringX = 0, ringY = 0, targetX = 0, targetY = 0;
+      window.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+        cursorDot.style.left = targetX + 'px';
+        cursorDot.style.top = targetY + 'px';
+      }, { passive: true });
+      function animateCursor() {
+        ringX += (targetX - ringX) * 0.18;
+        ringY += (targetY - ringY) * 0.18;
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+        requestAnimationFrame(animateCursor);
+      }
+      requestAnimationFrame(animateCursor);
+      document.addEventListener('mouseover', (e) => {
+        if (e.target.closest('a, button, select, .skill-3d-card, .tilt-card, .book-shot')) cursorRing.classList.add('hovered');
+        else cursorRing.classList.remove('hovered');
+      });
+
+      /* 2. PRELOADER */
+      const preloader = document.getElementById('preloader');
+      const introCanvas = document.getElementById('introCanvas');
+      const ictx = introCanvas.getContext('2d');
+      const loaderPct = document.getElementById('loaderPct');
+      const loaderBar = document.getElementById('loaderBar');
+      const loaderLoc = document.getElementById('loaderLoc');
+      let loadProgress = 0, introRot = 0, introDone = false;
+      function finishIntro() {
+        if (introDone) return;
+        introDone = true;
+        preloader.classList.add('hidden');
+      }
+      document.getElementById('skipIntroBtn').addEventListener('click', finishIntro);
+      function renderIntroGlobe() {
+        if (introDone) return;
+        const w = introCanvas.width, h = introCanvas.height, cx = w / 2, cy = h / 2;
+        ictx.clearRect(0, 0, w, h);
+        const zoomScale = 1 + (loadProgress / 100) * 0.55;
+        const radius = 84 * zoomScale;
+        const grad = ictx.createRadialGradient(cx, cy, radius * 0.5, cx, cy, radius * 1.4);
+        grad.addColorStop(0, 'rgba(245, 158, 11, 0.28)');
+        grad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+        ictx.fillStyle = grad;
+        ictx.beginPath();
+        ictx.arc(cx, cy, radius * 1.4, 0, Math.PI * 2);
+        ictx.fill();
+        ictx.strokeStyle = 'rgba(245, 158, 11, 0.52)';
+        ictx.lineWidth = 1.2;
+        ictx.beginPath();
+        ictx.arc(cx, cy, radius, 0, Math.PI * 2);
+        ictx.stroke();
+        for (let i = -2; i <= 2; i++) {
+          const latY = cy + (i * radius) / 3;
+          const latR = Math.sqrt(Math.max(0, radius * radius - Math.pow((i * radius) / 3, 2)));
+          ictx.beginPath();
+          ictx.ellipse(cx, latY, latR, latR * 0.25, 0, 0, Math.PI * 2);
+          ictx.stroke();
+        }
+        for (let j = 0; j < 4; j++) {
+          const angle = introRot + (j * Math.PI) / 4;
+          ictx.beginPath();
+          ictx.ellipse(cx, cy, Math.abs(Math.cos(angle)) * radius, radius, 0, 0, Math.PI * 2);
+          ictx.stroke();
+        }
+        const tx = cx + Math.sin(introRot) * (radius * 0.35);
+        const ty = cy - radius * 0.18;
+        ictx.fillStyle = '#f43f5e';
+        ictx.beginPath();
+        ictx.arc(tx, ty, 5, 0, Math.PI * 2);
+        ictx.fill();
+        introRot += 0.035;
+        loadProgress = Math.min(100, loadProgress + 2.4);
+        const pctInt = Math.floor(loadProgress);
+        loaderPct.textContent = pctInt + '%';
+        loaderBar.style.width = pctInt + '%';
+        if (pctInt > 65) loaderLoc.textContent = 'TARGET ACQUIRED: PRITAM NAGAR // READY';
+        if (loadProgress >= 100) setTimeout(finishIntro, 220);
+        else requestAnimationFrame(renderIntroGlobe);
+      }
+      requestAnimationFrame(renderIntroGlobe);
+
+      /* 3. SCROLL HUD */
+      const topScrollBar = document.getElementById('topScrollBar');
+      const scrollRing = document.getElementById('scrollRing');
+      const scrollPctText = document.getElementById('scrollPctText');
+      const activeSecLabel = document.getElementById('activeSecLabel');
+      const sections = ['hero', 'skills', 'projects', 'book', 'experience', 'contact'];
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? Math.min(100, Math.max(0, Math.round((scrollTop / docHeight) * 100))) : 0;
+        topScrollBar.style.width = pct + '%';
+        scrollPctText.textContent = pct + '%';
+        scrollRing.style.setProperty('--scroll-deg', (pct * 3.6) + 'deg');
+        for (const id of sections) {
+          const el = document.getElementById(id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= 240 && rect.bottom >= 240) {
+              activeSecLabel.textContent = id.toUpperCase();
+              break;
+            }
+          }
+        }
+      }, { passive: true });
+
+      /* 4. THEME, FONT, LAYOUT & ATS SWITCHERS */
+      function setTheme(themeName) {
+        document.documentElement.setAttribute('data-theme', themeName);
+        document.querySelectorAll('.theme-btn').forEach(b => {
+          b.classList.toggle('active', b.dataset.setTheme === themeName);
+        });
+      }
+      document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.addEventListener('click', () => setTheme(btn.dataset.setTheme));
+      });
+      document.getElementById('fontSelector').addEventListener('change', (e) => {
+        document.documentElement.setAttribute('data-font', e.target.value);
+      });
+      document.getElementById('layoutSelector').addEventListener('change', (e) => {
+        document.documentElement.setAttribute('data-layout', e.target.value);
+      });
+      const atsBtn = document.getElementById('atsToggleBtn');
+      atsBtn.addEventListener('click', () => {
+        document.body.classList.toggle('ats-mode');
+        atsBtn.classList.toggle('active');
+        atsBtn.textContent = document.body.classList.contains('ats-mode') ? 'Exit ATS Mode' : 'ATS Mode';
+      });
+
+      /* 5. ROLE SWITCHER */
+      const roleContent = {
+        hybrid: {
+          title: "Hi, I'm <span>Pritam Nagar</span> — Turning Data & Interfaces into Impact.",
+          desc: "Final-year B.Tech Mechanical Engineering student at MANIT (NIT Bhopal). I build executive Power BI dashboards, automated SQL/Python analytics pipelines, and interactive full-stack web experiences."
+        },
+        data: {
+          title: "Hi, I'm <span>Pritam Nagar</span> — Data & Business Intelligence Analyst.",
+          desc: "Transforming raw operational datasets into clear executive KPIs using SQL, PostgreSQL, Python (Pandas/NumPy), Power BI (DAX & Power Query), and root-cause statistical analysis."
+        },
+        frontend: {
+          title: "Hi, I'm <span>Pritam Nagar</span> — Full-Stack & Frontend Web Developer.",
+          desc: "Crafting high-speed, responsive web portals, e-commerce storefronts, multi-theme UI systems, and interactive 3D browser experiences using HTML5, CSS3, JS, and Node.js."
+        }
+      };
+      document.querySelectorAll('.role-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.role-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const d = roleContent[pill.dataset.role];
+          document.getElementById('heroHeading').innerHTML = d.title;
+          document.getElementById('heroDesc').textContent = d.desc;
+        });
+      });
+
+      /* 6. HERO 3D NEURAL MESH & CARD TILT */
+      const heroCanvas = document.getElementById('hero3dCanvas');
+      const hctx = heroCanvas.getContext('2d');
+      const heroStage = document.getElementById('heroStage');
+      let mouseX = 0, mouseY = 0, phase = 0;
+      heroStage.addEventListener('mousemove', (e) => {
+        const rect = heroStage.getBoundingClientRect();
+        mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        document.getElementById('fb1').style.transform = `translate(${mouseX * -15}px, ${mouseY * -12}px)`;
+        document.getElementById('fb2').style.transform = `translate(${mouseX * 16}px, ${mouseY * 12}px)`;
+        document.getElementById('fb3').style.transform = `translate(${mouseX * -10}px, ${mouseY * 15}px)`;
+      });
+      function drawHero3D() {
+        const rect = heroStage.getBoundingClientRect();
+        if (heroCanvas.width !== Math.floor(rect.width) || heroCanvas.height !== Math.floor(rect.height)) {
+          heroCanvas.width = Math.floor(rect.width);
+          heroCanvas.height = Math.floor(rect.height);
+        }
+        const w = heroCanvas.width, h = heroCanvas.height, cx = w / 2, cy = h / 2;
+        hctx.clearRect(0, 0, w, h);
+        const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#b45309';
+        const nodes = [];
+        for (let i = 0; i < 42; i++) {
+          const t = (i / 42) * Math.PI * 2 + phase;
+          const r = 95 + Math.sin(t * 3 + phase) * 28;
+          const x3d = Math.cos(t) * r, y3d = Math.sin(t) * r, z3d = Math.sin(t * 2 + phase) * 65;
+          const rotX = x3d * Math.cos(mouseX * 0.5) - z3d * Math.sin(mouseX * 0.5);
+          const rotY = y3d * Math.cos(mouseY * 0.5) - z3d * Math.sin(mouseY * 0.5);
+          const scale = 300 / (300 + z3d);
+          nodes.push({ x: cx + rotX * scale, y: cy + rotY * scale, scale });
+        }
+        hctx.strokeStyle = accentColor;
+        hctx.globalAlpha = 0.28;
+        hctx.lineWidth = 1.2;
+        for (let i = 0; i < nodes.length; i++) {
+          const next = nodes[(i + 1) % nodes.length];
+          const skip = nodes[(i + 7) % nodes.length];
+          hctx.beginPath();
+          hctx.moveTo(nodes[i].x, nodes[i].y);
+          hctx.lineTo(next.x, next.y);
+          hctx.lineTo(skip.x, skip.y);
+          hctx.stroke();
+        }
+        hctx.globalAlpha = 0.95;
+        hctx.fillStyle = accentColor;
+        for (const n of nodes) {
+          hctx.beginPath();
+          hctx.arc(n.x, n.y, 3.2 * n.scale, 0, Math.PI * 2);
+          hctx.fill();
+        }
+        phase += 0.015;
+        requestAnimationFrame(drawHero3D);
+      }
+      requestAnimationFrame(drawHero3D);
+
+      function attach3DTilt(selector) {
+        document.querySelectorAll(selector).forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform = `perspective(900px) rotateY(${x * 9}deg) rotateX(${-y * 9}deg) translateY(-4px)`;
+          });
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg) translateY(0px)';
+          });
+        });
+      }
+      attach3DTilt('.skill-3d-card');
+
+      /* 7. EXACT FOLDER-MATCHED GITHUB & LINKEDIN FEATURED PROJECTS */
+      const fallbackImages = [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+      ];
+
+      const majorProjects = [
+        {
+          id: "amazon",
+          matchKeywords: ["amazon_sales_data_analysis", "amazon_sales"],
+          title: "Amazon Sales Data Warehouse & Power BI Dashboard",
+          category: "FEATURED • POWER BI & SQL",
+          skills: ["sql", "powerbi"],
+          image: "https://raw.githubusercontent.com/Pritam9952/Major_data_analysis_projects/main/Amazon_Sales_Data_Analysis/Power%20BI/dashboard_img.png",
+          gallery: ["https://raw.githubusercontent.com/Pritam9952/Major_data_analysis_projects/main/Amazon_Sales_Data_Analysis/Power%20BI/dashboard_img.png"],
+          desc: "End-to-end Amazon Sales analytics dashboard tracking 120K+ orders, 76M total revenue, AOV, cancellation rate, and SKU-level performance in Power BI.",
+          tech: ["Power BI", "DAX", "SQL", "PostgreSQL", "Data Warehousing"],
+          github: "https://github.com/Pritam9952/Major_data_analysis_projects/tree/main/Amazon_Sales_Data_Analysis",
+          live: "https://www.linkedin.com/in/pritam-nagar/"
+        },
+        {
+          id: "netflix",
+          matchKeywords: ["netflix_user_retention", "netflix_sales", "netflix"],
+          title: "Netflix User Retention & Churn Analysis (End-to-End)",
+          category: "FEATURED • PYTHON, SQL & POWER BI",
+          skills: ["python", "sql", "powerbi"],
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+          gallery: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"],
+          desc: "End-to-end customer churn and retention intelligence pipeline combining Python EDA, SQL cohort queries, and an interactive Power BI executive dashboard.",
+          tech: ["Python", "SQL", "Power BI", "DAX", "Churn Modeling"],
+          github: "https://github.com/Pritam9952/Major_data_analysis_projects/tree/main/netflix_user_retention_analysis",
+          live: "https://www.linkedin.com/in/pritam-nagar/"
+        },
+        {
+          id: "eicher",
+          matchKeywords: ["eicher_tmtl", "eicher"],
+          title: "Eicher TMTL — Defect Analysis Dashboard (Industry Project)",
+          category: "INDUSTRY INTERNSHIP • EXCEL & POWER QUERY",
+          skills: ["powerbi", "sql"],
+          image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+          gallery: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80"],
+          desc: "Industrial Quality Assurance dashboard built during internship at Eicher TMTL for tractor component defect tracking, Pareto root-cause analysis, and preventive recommendations.",
+          tech: ["Excel", "Power Query", "KPI Dashboard", "Root Cause Analysis"],
+          github: "https://github.com/Pritam9952/Data-Analysis-Project-Excel/tree/main/Eicher_Tmtl_Traniee",
+          live: "https://www.linkedin.com/in/pritam-nagar/"
+        },
+        {
+          id: "uber",
+          matchKeywords: ["uber%20rides", "uber_rides", "ride%20booking", "uber"],
+          title: "Uber Ride Demand & Cancellation Analytics Dashboard",
+          category: "MAJOR • PYTHON, SQL & POWER BI",
+          skills: ["python", "sql", "powerbi"],
+          image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80",
+          gallery: ["https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80"],
+          desc: "Analyzed peak-hour ride booking demand, driver cancellation bottlenecks, and trip completion trends using Python, SQL, and Power BI visual storytelling.",
+          tech: ["Python", "SQL", "Power BI", "EDA"],
+          github: "https://github.com/Pritam9952/Major_data_analysis_projects",
+          live: "https://www.linkedin.com/in/pritam-nagar/"
+        },
+        {
+          id: "skin",
+          matchKeywords: ["skin-cancer", "skin_cancer", "skin"],
+          title: "Skin Cancer Classification App (Deep Learning & CV)",
+          category: "MAJOR • ML & COMPUTER VISION",
+          skills: ["python"],
+          image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80",
+          gallery: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"],
+          desc: "AI-powered Skin Disease Detection System built with Python, GLCM feature engineering, and Computer Vision models with an interactive web UI.",
+          tech: ["Python", "Deep Learning", "Computer Vision", "Streamlit"],
+          github: "https://github.com/Pritam9952/ML-Computer-Vision-Projects/tree/main/Skin-Cancer-Classification-App",
+          live: "https://github.com/Pritam9952/ML-Computer-Vision-Projects"
+        },
+        {
+          id: "placement",
+          matchKeywords: ["placement-portal", "website_clones"],
+          title: "Full-Stack Placement Portal & E-Commerce Web Apps",
+          category: "FULL-STACK • FRONTEND + BACKEND",
+          skills: ["frontend", "sql"],
+          image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+          gallery: ["https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"],
+          desc: "Built full-stack Placement Portal (frontend, backend & AI service deployed on Vercel) alongside interactive e-commerce storefronts with CSV export.",
+          tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "Vercel"],
+          github: "https://github.com/Pritam9952/placement-portal",
+          live: "https://placement-portal-self-beta.vercel.app"
+        }
+      ];
+
+      function openCaseModal(proj) {
+        document.getElementById('modalTag').textContent = proj.category || proj.tag || 'PROJECT GALLERY';
+        document.getElementById('modalTitle').textContent = proj.title;
+        document.getElementById('modalDesc').textContent = proj.desc;
+        document.getElementById('modalGithubLink').href = proj.github || proj.link;
+        document.getElementById('modalLiveLink').href = proj.live || proj.link;
+        document.getElementById('modalTechRow').innerHTML = (proj.tech || []).map(t => `<span class="tech-chip">${t}</span>`).join('');
+
+        const imgs = (proj.gallery && proj.gallery.length > 0) ? proj.gallery : [proj.image];
+        const mainImg = document.getElementById('modalMainImg');
+        mainImg.src = imgs[0];
+
+        const strip = document.getElementById('modalThumbStrip');
+        strip.innerHTML = imgs.map((src, i) => `
+          <img src="${src}" class="${i === 0 ? 'active' : ''}" alt="Slide ${i + 1}" />
+        `).join('');
+        strip.querySelectorAll('img').forEach((thumb, i) => {
+          thumb.addEventListener('click', () => {
+            mainImg.src = imgs[i];
+            strip.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+          });
+        });
+
+        document.getElementById('caseModal').classList.add('open');
+      }
+      document.getElementById('closeModalBtn').addEventListener('click', () => {
+        document.getElementById('caseModal').classList.remove('open');
+      });
+      document.getElementById('caseModal').addEventListener('click', (e) => {
+        if (e.target.id === 'caseModal') e.currentTarget.classList.remove('open');
+      });
+
+      function renderMajorProjects(filterSkill = null) {
+        const grid = document.getElementById('majorProjectsGrid');
+        const list = filterSkill ? majorProjects.filter(p => p.skills.includes(filterSkill)) : majorProjects;
+        grid.innerHTML = list.map((p, idx) => `
+          <article class="tilt-card">
+            <div class="proj-img-wrap" data-open-idx="${idx}">
+              <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.src='${fallbackImages[idx % fallbackImages.length]}'" />
+              <span class="proj-badge-overlay">${p.category}</span>
+              <span class="gallery-pill">🔍 ${p.gallery.length} Shot${p.gallery.length > 1 ? 's' : ''}</span>
+            </div>
+            <div class="proj-body">
+              <div>
+                <h3>${p.title}</h3>
+                <p>${p.desc}</p>
+                <div class="tech-row">${p.tech.map(t => `<span class="tech-chip">${t}</span>`).join('')}</div>
+              </div>
+              <div class="card-links">
+                <button type="button" data-open-idx="${idx}">Case Study 🔍</button>
+                <a href="${p.github}" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="${p.live}" target="_blank" rel="noopener">Live ↗</a>
+              </div>
+            </div>
+          </article>
+        `).join('');
+
+        grid.querySelectorAll('[data-open-idx]').forEach(el => {
+          el.addEventListener('click', () => openCaseModal(list[parseInt(el.dataset.openIdx, 10)]));
+        });
+        attach3DTilt('.tilt-card');
+      }
+
+      /* 8. 3D READING BOOK WITH MULTI-SCREENSHOT THUMBNAILS */
+      let bookProjects = [
+        {
+          tag: "GITHUB REPO // POWER BI SUITE",
+          title: "Data Analysis Project — Power BI",
+          image: fallbackImages[0],
+          gallery: [fallbackImages[0]],
+          desc: "Collection of interactive Power BI reports, DAX calculations, and business intelligence data models synced from Pritam9952.",
+          tech: ["Power BI", "DAX", "Power Query"],
+          link: "https://github.com/Pritam9952/Data-Analysis-Project-Power_BI"
+        }
+      ];
+      let bookIdx = 0;
+      const leftPageEl = document.getElementById('bookLeftPage');
+      const rightPageEl = document.getElementById('bookRightPage');
+      const indicatorEl = document.getElementById('bookPageIndicator');
+
+      function renderBook() {
+        const item = bookProjects[bookIdx];
+        const imgs = (item.gallery && item.gallery.length > 0) ? item.gallery : [item.image];
+        leftPageEl.innerHTML = `
+          <div>
+            <span class="page-num">${item.tag}</span>
+            <img src="${imgs[0]}" id="activeBookImg" alt="${item.title}" class="book-shot" style="margin-top:10px;" onerror="this.src='${fallbackImages[0]}'" />
+            <div class="thumb-strip" id="bookThumbStrip">
+              ${imgs.map((s, i) => `<img src="${s}" class="${i === 0 ? 'active' : ''}" data-src="${s}" alt="Thumb ${i + 1}" />`).join('')}
+            </div>
+          </div>
+          <span class="page-num">Page ${bookIdx * 2 + 1} • Click image to zoom</span>
+        `;
+        rightPageEl.innerHTML = `
+          <div>
+            <span class="page-num">README & ARCHITECTURE</span>
+            <h3 style="font-size:1.45rem; margin:10px 0 12px;">${item.title}</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-bottom:18px;">${item.desc}</p>
+            <div class="tech-row">${item.tech.map(t => `<span class="tech-chip">${t}</span>`).join('')}</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding-top:14px; border-top:1px solid var(--border);">
+            <a href="${item.link}" target="_blank" rel="noopener" class="btn-primary" style="padding:8px 16px; font-size:0.82rem;">Open on GitHub ↗</a>
+            <span class="page-num">Page ${bookIdx * 2 + 2}</span>
+          </div>
+        `;
+        indicatorEl.textContent = `Project ${bookIdx + 1} / ${bookProjects.length}`;
+
+        document.getElementById('activeBookImg').addEventListener('click', () => openCaseModal(item));
+        document.querySelectorAll('#bookThumbStrip img').forEach(th => {
+          th.addEventListener('click', () => {
+            document.getElementById('activeBookImg').src = th.dataset.src;
+            document.querySelectorAll('#bookThumbStrip img').forEach(t => t.classList.remove('active'));
+            th.classList.add('active');
+          });
+        });
+      }
+
+      function flipBook(dir) {
+        leftPageEl.classList.add('flipping');
+        rightPageEl.classList.add('flipping');
+        setTimeout(() => {
+          bookIdx = (bookIdx + dir + bookProjects.length) % bookProjects.length;
+          renderBook();
+          leftPageEl.classList.remove('flipping');
+          rightPageEl.classList.remove('flipping');
+        }, 220);
+      }
+      document.getElementById('prevPageBtn').addEventListener('click', () => flipBook(-1));
+      document.getElementById('nextPageBtn').addEventListener('click', () => flipBook(1));
+
+      /* 9. CONNECTED BACKEND + EXACT FOLDER-MATCHED GITHUB SYNC */
+      async function syncGitHubAndBackend() {
+        const statusEl = document.getElementById('githubSyncStatus');
+        try {
+          const vRes = await fetch(`${API_BASE}/api/visit`, { method: 'POST' });
+          if (vRes.ok) {
+            const vData = await vRes.json();
+            document.getElementById('visitorCount').textContent = vData.views.toLocaleString();
+          }
+        } catch (_) {}
+
+        try {
+          const bRes = await fetch(`${API_BASE}/api/github-projects`);
+          if (bRes.ok) {
+            const bData = await bRes.json();
+            const rawRepos = bData.projects || [];
+            if (rawRepos.length > 0) {
+              document.getElementById('repoCountStat').textContent = rawRepos.length + '+';
+              bookProjects = rawRepos.map((repo, idx) => {
+                const imgs = (repo.allImages && repo.allImages.length > 0)
+                  ? repo.allImages.slice(0, 10)
+                  : [repo.image || fallbackImages[idx % fallbackImages.length]];
+                return {
+                  tag: `GITHUB (${bData.source.toUpperCase()}) // ${repo.language}`,
+                  title: repo.name,
+                  image: imgs[0],
+                  gallery: imgs,
+                  desc: repo.description,
+                  tech: [repo.language, `★ ${repo.stars}`, `${imgs.length} Screenshot(s)`],
+                  link: repo.url
+                };
+              });
+              bookIdx = 0;
+              renderBook();
+
+              const allRepoImgs = rawRepos.flatMap(r => r.allImages || []);
+              majorProjects.forEach(mp => {
+                const exactMatches = allRepoImgs.filter(url =>
+                  mp.matchKeywords.some(kw => url.toLowerCase().includes(kw))
+                );
+                if (exactMatches.length > 0) {
+                  mp.image = exactMatches[0];
+                  mp.gallery = exactMatches.slice(0, 10);
+                }
+              });
+              renderMajorProjects();
+              statusEl.textContent = `✓ Live Synced (${rawRepos.length} Repos + Exact Dashboards)`;
+            }
+          }
+        } catch (_) {
+          statusEl.textContent = '✓ Portfolio Showcase Ready';
+        }
+      }
+
+      /* 10. SKILL FILTERING & BACKEND INQUIRY */
+      document.querySelectorAll('.skill-3d-card').forEach(card => {
+        card.addEventListener('click', () => {
+          document.querySelectorAll('.skill-3d-card').forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          renderMajorProjects(card.dataset.skill);
+          document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      document.getElementById('resetFilterBtn').addEventListener('click', () => {
+        document.querySelectorAll('.skill-3d-card').forEach(c => c.classList.remove('active'));
+        renderMajorProjects(null);
+      });
+
+      let selectedScope = 'Full-Time Data / BI Role';
+      const senderName = document.getElementById('senderName');
+      const senderEmail = document.getElementById('senderEmail');
+      const senderMsg = document.getElementById('senderMsg');
+      const liveBriefText = document.getElementById('liveBriefText');
+      const mailtoBtn = document.getElementById('mailtoDispatchBtn');
+      const apiSubmitStatus = document.getElementById('apiSubmitStatus');
+
+      function updateBrief() {
+        const name = senderName.value.trim() || '[Your Name / Org]';
+        const email = senderEmail.value.trim() || '[Your Email]';
+        const msg = senderMsg.value.trim() || 'Interested in discussing Data Analytics, BI Dashboarding, or Full-Stack Web Development.';
+        const brief = `TO: Pritam Nagar (NIT Bhopal)\nTRACK: ${selectedScope}\nFROM: ${name} (${email})\n\nMESSAGE:\n${msg}`;
+        liveBriefText.textContent = brief;
+        mailtoBtn.href = `mailto:pritamnagar@example.com?subject=${encodeURIComponent(selectedScope + ' — ' + name)}&body=${encodeURIComponent(brief)}`;
+      }
+      document.querySelectorAll('.scope-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.scope-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          selectedScope = pill.dataset.scope;
+          updateBrief();
+        });
+      });
+      [senderName, senderEmail, senderMsg].forEach(el => el.addEventListener('input', updateBrief));
+
+      document.getElementById('submitBackendBtn').addEventListener('click', async () => {
+        const name = senderName.value.trim();
+        const email = senderEmail.value.trim();
+        const message = senderMsg.value.trim();
+        if (!name || !email) {
+          apiSubmitStatus.textContent = '⚠️ Please enter your Name and Email first.';
+          return;
+        }
+        apiSubmitStatus.textContent = '⏳ Saving inquiry to backend...';
+        try {
+          const res = await fetch(`${API_BASE}/api/inquiries`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, scope: selectedScope, message })
+          });
+          if (!res.ok) throw new Error('Server offline');
+          const data = await res.json();
+          apiSubmitStatus.textContent = `✅ Inquiry Saved! Reference ID: ${data.inquiry.id}`;
+          senderName.value = '';
+          senderEmail.value = '';
+          senderMsg.value = '';
+          updateBrief();
+        } catch (_) {
+          apiSubmitStatus.textContent = 'ℹ️ Backend offline — click "Email ↗" or "Copy Brief" to send directly!';
+        }
+      });
+
+      document.getElementById('copyBriefBtn').addEventListener('click', () => {
+        navigator.clipboard.writeText(liveBriefText.textContent);
+        const btn = document.getElementById('copyBriefBtn');
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => { btn.textContent = 'Copy Brief'; }, 1800);
+      });
+
+      /* 11. EXTREME AI CO-PILOT (GEMINI LLM + SITE CONTROL + VOICE MIC) */
+      const chatWin = document.getElementById('aiChatWindow');
+      const chatBody = document.getElementById('chatBody');
+      const chatInput = document.getElementById('chatInput');
+      const micBtn = document.getElementById('micBtn');
+
+      document.getElementById('aiToggleBtn').addEventListener('click', () => chatWin.classList.toggle('open'));
+      document.getElementById('closeChatBtn').addEventListener('click', () => chatWin.classList.remove('open'));
+
+      function appendMsg(text, cls) {
+        const div = document.createElement('div');
+        div.className = cls;
+        div.textContent = text;
+        chatBody.appendChild(div);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+
+      function executeSiteCommands(text) {
+        const q = text.toLowerCase();
+        if (q.includes('crimson') || q.includes('rose') || q.includes('dark')) { setTheme('rose'); return '🎨 Switched theme to Crimson Velvet!'; }
+        if (q.includes('sand')) { setTheme('sand'); return '🎨 Switched theme to Warm Sand!'; }
+        if (q.includes('sage') || q.includes('green')) { setTheme('sage'); return '🎨 Switched theme to Arctic Sage!'; }
+        if (q.includes('mocha') || q.includes('coffee')) { setTheme('mocha'); return '🎨 Switched theme to Espresso Mocha!'; }
+        if (q.includes('frost') || q.includes('blue')) { setTheme('frost'); return '🎨 Switched theme to Nordic Frost!'; }
+
+        if (q.includes('italic')) {
+          document.documentElement.setAttribute('data-font', 'italic-serif');
+          document.getElementById('fontSelector').value = 'italic-serif';
+          return '✍️ Switched typography to Classic Editorial Italic!';
+        }
+        if (q.includes('mono')) {
+          document.documentElement.setAttribute('data-font', 'mono');
+          document.getElementById('fontSelector').value = 'mono';
+          return '💻 Switched typography to Developer Mono!';
+        }
+
+        if (q.includes('open amazon')) {
+          const p = majorProjects.find(x => x.id === 'amazon');
+          if (p) openCaseModal(p);
+          return '📦 Opened Amazon Sales Data Warehouse & Power BI Dashboard!';
+        }
+        if (q.includes('open netflix')) {
+          const p = majorProjects.find(x => x.id === 'netflix');
+          if (p) openCaseModal(p);
+          return '🎬 Opened Netflix User Retention Case Study & Gallery!';
+        }
+        if (q.includes('book') || q.includes('github')) {
+          document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+        }
+        return null;
+      }
+
+      async function sendUserMsg(text) {
+        if (!text.trim()) return;
+        appendMsg(text, 'msg-user');
+        chatInput.value = '';
+
+        const cmdFeedback = executeSiteCommands(text);
+        if (cmdFeedback) {
+          setTimeout(() => appendMsg(cmdFeedback, 'msg-bot'), 180);
+          return;
+        }
+
+        const thinkingDiv = document.createElement('div');
+        thinkingDiv.className = 'msg-bot';
+        thinkingDiv.textContent = '⏳ Analyzing...';
+        chatBody.appendChild(thinkingDiv);
+
+        try {
+          const res = await fetch(`${API_BASE}/api/chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text })
+          });
+          if (!res.ok) throw new Error('Chat API error');
+          const data = await res.json();
+          thinkingDiv.textContent = data.reply;
+        } catch (_) {
+          thinkingDiv.textContent = "Pritam NIT Bhopal '26 se hain aur SQL, PostgreSQL, Python, Power BI + Full-Stack Web Dev me kaam karte hain!";
+        }
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+
+      document.getElementById('sendChatBtn').addEventListener('click', () => sendUserMsg(chatInput.value));
+      chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendUserMsg(chatInput.value); });
+      document.querySelectorAll('.chat-quick button').forEach(b => b.addEventListener('click', () => sendUserMsg(b.dataset.q)));
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-IN';
+        micBtn.addEventListener('click', () => {
+          micBtn.classList.add('listening');
+          recognition.start();
+        });
+        recognition.onresult = (event) => {
+          micBtn.classList.remove('listening');
+          sendUserMsg(event.results[0][0].transcript);
+        };
+        recognition.onerror = () => micBtn.classList.remove('listening');
+        recognition.onend = () => micBtn.classList.remove('listening');
+      } else {
+        micBtn.style.display = 'none';
+      }
+
+      renderMajorProjects();
+      renderBook();
+      updateBrief();
+      syncGitHubAndBackend();
+    })();
+  </script>
+</body>
+</html>
