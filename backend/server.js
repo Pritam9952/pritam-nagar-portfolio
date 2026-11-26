@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const GITHUB_USER = process.env.GITHUB_USERNAME || 'Pritam9952';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const ADMIN_KEY = process.env.ADMIN_KEY || 'pritam2026';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 const DB_FILE = path.join(__dirname, 'data.json');
@@ -14,6 +15,17 @@ const DB_FILE = path.join(__dirname, 'data.json');
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
+
+function getGitHubHeaders() {
+  const headers = {
+    'User-Agent': 'Pritam-Nagar-Portfolio',
+    'Accept': 'application/vnd.github+json'
+  };
+  if (GITHUB_TOKEN) {
+    headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
+  }
+  return headers;
+}
 
 function readDB() {
   if (!fs.existsSync(DB_FILE)) {
@@ -96,14 +108,19 @@ app.get('/api/github-projects', async (req, res) => {
   const db = readDB();
   const CACHE_TTL = 30 * 60 * 1000;
 
-  if (db.cachedRepos && Date.now() - db.lastSync < CACHE_TTL && req.query.refresh !== 'true') {
+  if (db.cachedRepos && db.cachedRepos.length > 0 && Date.now() - db.lastSync < CACHE_TTL && req.query.refresh !== 'true') {
     return res.json({ source: 'cache', projects: db.cachedRepos });
   }
 
   try {
+    const ghHeaders = getGitHubHeaders();
     const apiUrl = 'https://api.github.com/users/' + GITHUB_USER + '/repos?sort=updated&per_page=30';
-    const repoRes = await fetch(apiUrl, { headers: { 'User-Agent': 'Pritam-Nagar-Portfolio' } });
-    if (!repoRes.ok) throw new Error('GitHub API Status: ' + repoRes.status);
+    const repoRes = await fetch(apiUrl, { headers: ghHeaders });
+    if (!repoRes.ok) {
+      const errBody = await repoRes.text();
+      console.error('GitHub Repos API Error:', repoRes.status, errBody);
+      throw new Error('GitHub API Status: ' + repoRes.status);
+    }
 
     const repos = await repoRes.json();
     const ignored = ['Pritam9952', 'pritam9952.github.io', 'pritam-portfolio', 'pritam-nagar-portfolio'];
@@ -119,7 +136,7 @@ app.get('/api/github-projects', async (req, res) => {
 
         try {
           const treeUrl = 'https://api.github.com/repos/' + GITHUB_USER + '/' + repo.name + '/git/trees/' + branch + '?recursive=1';
-          const treeRes = await fetch(treeUrl, { headers: { 'User-Agent': 'Pritam-Nagar-Portfolio' } });
+          const treeRes = await fetch(treeUrl, { headers: ghHeaders });
           if (treeRes.ok) {
             const treeData = await treeRes.json();
             const imgFiles = (treeData.tree || []).filter(item =>
@@ -128,7 +145,6 @@ app.get('/api/github-projects', async (req, res) => {
               (item.size || 0) > 35000 &&
               !/(logo|icon|badge|avatar|symbol|arrow|star|mzazon_logo)/i.test(item.path)
             );
-            // Prioritize dashboard_img or screenshot filenames first
             imgFiles.sort((a, b) => {
               const aScore = /(dashboard|screenshot|preview|result|output)/i.test(a.path) ? -1 : 1;
               const bScore = /(dashboard|screenshot|preview|result|output)/i.test(b.path) ? -1 : 1;
@@ -183,6 +199,7 @@ app.get('/api/github-projects', async (req, res) => {
     writeDB(db);
     res.json({ source: 'live', projects: enrichedProjects });
   } catch (error) {
+    console.error('GitHub Sync Fallback Triggered:', error.message);
     res.json({ source: 'fallback', projects: db.cachedRepos || [] });
   }
 });
